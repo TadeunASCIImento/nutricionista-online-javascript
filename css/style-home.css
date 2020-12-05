@@ -3,16 +3,23 @@ header{
   padding: 5px;
   text-align: center;
 }
+.principal{
+  border: 1px solid lightgray;
+  box-shadow: 10px 10px 5px lightgrey;
+  padding: 30px;
+  margin-top: 10px;
+}
 .titulo,.subtitulo{
   font-family: monospace;
   padding: 5px;
 }
+
 .table-pacientes{
   text-align: center;
   margin-top: 40px;
 }
 thead{
-  background-color: darkcyan;
+  background-color:coral;
   color: whitesmoke;
   font-weight: bold;
 }
@@ -20,9 +27,18 @@ thead{
   background-color: lightcoral;
 }
 .formulario-paciente{
-  width: 50%;
   margin-bottom: 40px;
 }
 #nome,#sobrenome,#peso,#altura,.btn{
   height: 50px;
+}
+#enviar{
+  margin-top: 33px;
+  width: 100%;
+  background-color: orangered;
+  border: none;
+}
+#enviar:hover{
+  background-color: orange;
+  transition: 1s;
 }
