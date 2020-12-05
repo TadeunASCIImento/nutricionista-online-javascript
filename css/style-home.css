@@ -1,0 +1,13 @@
+header{
+  font-family: monospace;
+  padding: 5px;
+  text-align: center;
+}
+.titulo,.subtitulo{
+  font-family: monospace;
+  padding: 5px;
+}
+.table-pacientes{
+  text-align: center;
+  margin-top: 40px;
+}
