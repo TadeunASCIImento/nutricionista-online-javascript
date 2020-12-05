@@ -32,13 +32,13 @@ thead{
 #nome,#sobrenome,#peso,#altura,.btn{
   height: 50px;
 }
-#enviar{
+#botao-enviar{
   margin-top: 33px;
   width: 100%;
   background-color: orangered;
   border: none;
 }
-#enviar:hover{
+#botao-enviar:hover{
   background-color: orange;
   transition: 1s;
 }
