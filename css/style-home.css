@@ -11,3 +11,11 @@ header{
   text-align: center;
   margin-top: 40px;
 }
+thead{
+  background-color: darkcyan;
+  color: whitesmoke;
+  font-weight: bold;
+}
+.paciente-invalido{
+  background-color: lightcoral;
+}
