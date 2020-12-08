@@ -6,9 +6,10 @@ botaoEnviar.addEventListener("click", function(event) {
     let paciente = obterDadosDoPaciente(formulario);
     
     let pacienteTr = montaTr(paciente);
-    
+
     let pacientes = document.querySelector(".pacientes");
     pacientes.appendChild(pacienteTr);
+    formulario.reset();
 
 });
 
@@ -44,4 +45,3 @@ function montaTd(dado,classe) {
     td.classList.add(classe);
     return td;
 }
-
