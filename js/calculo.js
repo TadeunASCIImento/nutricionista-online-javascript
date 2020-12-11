@@ -5,17 +5,17 @@ pacientes.forEach(paciente=>{
     let altura = paciente.querySelector(".altura").textContent;
     let indice = paciente.querySelector(".indice");
     
-    let pesoEhValido = true;
-    let alturaEhValida = true;
+    let pesoEhValido = validaPeso(peso);
+    let alturaEhValida = validaAltura(altura);
      
-    if(peso < 0 || peso > 500){
+    if(!pesoEhValido){
         pesoEhValido = false;
         indice.textContent = "Peso inválido!";
         paciente.classList.add("paciente-invalido");
      
     }
     
-    if( altura < 0 |! altura > 3){
+    if(!alturaEhValida){
         alturaEhValida = false;
         indice.textContent = "Altura inválida!";
         paciente.classList.add("paciente-invalido");
@@ -27,6 +27,22 @@ pacientes.forEach(paciente=>{
     }
     
 });
+
+function validaPeso(){
+    if(peso >= 0 && peso < 600){
+        return true;
+    }else{
+        return false;
+    }
+}
+function validaAltura(){
+    if(altura <= 3  && altura >= 1){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 
 function calculaImc(peso,altura){
     let imc = 0;

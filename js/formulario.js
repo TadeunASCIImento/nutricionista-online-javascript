@@ -4,14 +4,27 @@ botaoEnviar.addEventListener("click", function(event) {
 
     let formulario = document.querySelector(".formulario-paciente");
     let paciente = obterDadosDoPaciente(formulario);
-    
     let pacienteTr = montaTr(paciente);
 
-    let pacientes = document.querySelector(".pacientes");
-    pacientes.appendChild(pacienteTr);
-    formulario.reset();
+    if(!validaPaciente(paciente)){
+        console.log("Paciente inválido");
+        return; 
+    }else{   
+        let pacientes = document.querySelector(".pacientes");
+        pacientes.appendChild(pacienteTr);
+        formulario.reset();
+    }
 
 });
+
+function validaPaciente(paciente){
+    if(validaPeso(paciente.peso) && validaAltura(paciente.altura)){
+       return true;
+    }else{
+        return false
+    }
+
+}
 
 function obterDadosDoPaciente(formulario) {
     let paciente = {
