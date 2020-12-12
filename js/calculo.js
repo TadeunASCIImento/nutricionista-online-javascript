@@ -28,15 +28,17 @@ pacientes.forEach(paciente=>{
     
 });
 
-function validaPeso(){
-    if(peso >= 0 && peso < 600){
+function validaPeso(peso){
+    if(peso >= 0 && peso <= 600){
         return true;
     }else{
         return false;
     }
 }
-function validaAltura(){
-    if(altura <= 3  && altura >= 1){
+
+
+function validaAltura(altura){
+    if(altura >=0   && altura <= 3.00){
         return true;
     }else{
         return false;

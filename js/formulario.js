@@ -6,24 +6,47 @@ botaoEnviar.addEventListener("click", function(event) {
     let paciente = obterDadosDoPaciente(formulario);
     let pacienteTr = montaTr(paciente);
 
-    if(!validaPaciente(paciente)){
-        console.log("Paciente inválido");
+    let erros = validaPaciente(paciente);
+    console.log(erros);
+    if(erros.length > 0){
+       exibeMensagensDeErro(erros);
         return; 
     }else{   
         let pacientes = document.querySelector(".pacientes");
         pacientes.appendChild(pacienteTr);
         formulario.reset();
+        let mensagensErro = document.querySelector(".mensagens-erro");
+        mensagensErro.innerHTML = "";
     }
 
 });
 
-function validaPaciente(paciente){
-    if(validaPeso(paciente.peso) && validaAltura(paciente.altura)){
-       return true;
-    }else{
-        return false
-    }
+function exibeMensagensDeErro(erros){
+    let ul = document.querySelector(".mensagens-erro");
+    ul.innerHTML = "";
+    erros.forEach(erro => {
+        let li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
 
+}
+
+function validaPaciente(paciente){
+    let erros = [];
+    if(!validaPeso(paciente.peso)) erros.push("Peso inválido!");  
+   
+    if(!validaAltura(paciente.altura)) erros.push("Altura inválida!");
+    
+    if(paciente.nome.length == 0) erros.push("Campo nome é obrigatório!");
+    
+    if(paciente.sobrenome.length == 0) erros.push("Campo sobrenome é obrigatório!");
+    
+    if(paciente.peso.length ==0)erros.push("Campo peso é obrigatório!");
+    
+    if(paciente.altura.length ==0)erros.push("Campo altura é obrigatório!");
+    
+    return erros;
 }
 
 function obterDadosDoPaciente(formulario) {

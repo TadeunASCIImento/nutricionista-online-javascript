@@ -42,3 +42,9 @@ thead{
   background-color: orange;
   transition: 1s;
 }
+
+.mensagens-erro{
+  color: red;
+  font-style: italic;
+  font-size: 1.2em;
+}
