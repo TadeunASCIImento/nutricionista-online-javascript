@@ -35,16 +35,11 @@ function exibeMensagensDeErro(erros){
 function validaPaciente(paciente){
     let erros = [];
     if(!validaPeso(paciente.peso)) erros.push("Peso inválido!");  
-   
-    if(!validaAltura(paciente.altura)) erros.push("Altura inválida!");
-    
-    if(paciente.nome.length == 0) erros.push("Campo nome é obrigatório!");
-    
-    if(paciente.sobrenome.length == 0) erros.push("Campo sobrenome é obrigatório!");
-    
-    if(paciente.peso.length ==0)erros.push("Campo peso é obrigatório!");
-    
-    if(paciente.altura.length ==0)erros.push("Campo altura é obrigatório!");
+    if(!validaAltura(paciente.altura)) erros.push("Altura inválida!"); 
+    if(paciente.nome.length == 0) erros.push("Campo nome é obrigatório!"); 
+    if(paciente.sobrenome.length == 0) erros.push("Campo sobrenome é obrigatório!"); 
+    if(paciente.peso.length == 0)erros.push("Campo peso é obrigatório!");
+    if(paciente.altura.length == 0)erros.push("Campo altura é obrigatório!");
     
     return erros;
 }
@@ -62,15 +57,14 @@ function obterDadosDoPaciente(formulario) {
 
 
 function montaTr(paciente) {
-    let pacienteTr = document.createElement("tr");
-    pacienteTr.classList.add("pacientes");
-     
+    let pacienteTr = document.createElement("tr");  
+    pacienteTr.classList.add("pacientes"); 
     pacienteTr.appendChild(montaTd(paciente.nome,"nome"));
     pacienteTr.appendChild(montaTd(paciente.sobrenome,"sobrenome"));
     pacienteTr.appendChild(montaTd(paciente.peso,"peso"));
     pacienteTr.appendChild(montaTd(paciente.altura,"altura"));
-    pacienteTr.appendChild(montaTd(paciente.imc,"indice"));
-
+    pacienteTr.appendChild(montaTd(paciente.imc,"indice")); 
+    
     return pacienteTr;
 
 }
@@ -79,5 +73,6 @@ function montaTd(dado,classe) {
     let td = document.createElement("td");
     td.textContent = dado;
     td.classList.add(classe);
+   
     return td;
 }
