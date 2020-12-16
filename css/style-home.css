@@ -1,53 +1,62 @@
-header{
-  font-family: monospace;
-  padding: 5px;
-  text-align: center;
-}
-.principal{
-  border: 1px solid lightgray;
-  box-shadow: 10px 10px 5px lightgrey;
-  padding: 30px;
-  margin-top: 10px;
-}
-.titulo,.subtitulo{
-  font-family: monospace;
-  padding: 5px;
+header {
+	font-family: monospace;
+	padding: 5px;
+	text-align: center;
 }
 
-.table-pacientes{
-  text-align: center;
-  margin-top: 40px;
-}
-thead{
-  background-color:coral;
-  color: whitesmoke;
-  font-weight: bold;
-}
-.paciente-invalido{
-  background-color: lightcoral;
-}
-.formulario-paciente{
-  margin-bottom: 40px;
-}
-#nome,#sobrenome,#peso,#altura,.btn{
-  height: 50px;
-}
-#botao-enviar{
-  margin-top: 33px;
-  width: 100%;
-  background-color: orangered;
-  border: none;
-}
-#botao-enviar:hover{
-  background-color: orange;
-  transition: 1s;
+.principal {
+	border: 1px solid lightgray;
+	box-shadow: 10px 10px 5px lightgrey;
+	padding: 30px;
+	margin-top: 10px;
 }
 
-.mensagens-erro{
-  color: red;
-  font-style: italic;
-  font-size: 1.2em;
+.titulo,.subtitulo {
+	font-family: monospace;
+	padding: 5px;
 }
-.btn,.btn-info,.btn-danger{
-  margin:10px 0px 10px 20px;
+
+.table-pacientes {
+	text-align: center;
+	margin-top: 40px;
+}
+
+thead {
+	background-color: coral;
+	color: whitesmoke;
+	font-weight: bold;
+}
+
+.paciente-invalido {
+	background-color: lightcoral;
+}
+
+.formulario-paciente {
+	margin-bottom: 40px;
+}
+
+#nome,#sobrenome,#peso,#altura,.btn {
+	height: 50px;
+}
+
+#botao-enviar {
+	margin-top: 33px;
+	width: 100%;
+	background-color: orangered;
+	border: none;
+}
+
+#botao-enviar:hover {
+	background-color: orange;
+	transition: 1s;
+}
+
+.mensagens-erro {
+	color: red;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.btn,.btn-info,.btn-danger {
+	margin: 10px 0px 10px 20px;
 }
