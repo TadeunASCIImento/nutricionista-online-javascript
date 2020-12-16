@@ -5,7 +5,6 @@ botaoEnviar.addEventListener("click", function(event) {
 	let paciente = obterDadosDoPaciente(formulario);
 	let pacienteTr = montaTr(paciente);
 	let erros = validaPaciente(paciente);
-	console.log(erros);
 	if(erros.length > 0) {
 		exibeMensagensDeErro(erros);
 		return;
@@ -52,12 +51,14 @@ function obterDadosDoPaciente(formulario) {
 
 function montaTr(paciente) {
 	let pacienteTr = document.createElement("tr");
-	pacienteTr.classList.add("pacientes");
+	pacienteTr.classList.add("paciente");
 	pacienteTr.appendChild(montaTd(paciente.nome, "nome"));
 	pacienteTr.appendChild(montaTd(paciente.sobrenome, "sobrenome"));
 	pacienteTr.appendChild(montaTd(paciente.peso, "peso"));
 	pacienteTr.appendChild(montaTd(paciente.altura, "altura"));
 	pacienteTr.appendChild(montaTd(paciente.imc, "indice"));
+	pacienteTr.appendChild(montaButton("Editar","btn","btn-info"));
+	pacienteTr.appendChild(montaButton("Excluír","btn","btn-danger"));
 	return pacienteTr;
 }
 
@@ -66,4 +67,12 @@ function montaTd(dado, classe) {
 	td.textContent = dado;
 	td.classList.add(classe);
 	return td;
+}
+
+function montaButton(acao,classOne,classTwo){
+	let button = document.createElement("button");
+	button.textContent = acao;
+	button.classList.add(classOne,classTwo);
+	return button;
+
 }

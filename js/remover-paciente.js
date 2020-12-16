@@ -1,6 +1,8 @@
-let botaoRemover = document.querySelector(".btn");
+let todosPacientes = document.querySelector(".pacientes");
 
-botaoRemover.addEventListener("click",function(){
-         console.log("Click do botão de excluir");
-    });
-    
+todosPacientes.addEventListener("dblclick",function(event){
+    event.target.parentNode.remove();
+});
+     
+
+
