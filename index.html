@@ -17,6 +17,8 @@
 				<h2 class="subtitulo"></h2> </div>
 			<div class="container">
 				<hr>
+				<label for="filtrar">Filtrar Pacientes</label>
+				<input type="text" name="filtrar" class="form-control filtro" id="filtro" placeholder="Digite o nome do paciente">
 				<table class="table table-bordered table-pacientes">
 					<thead>
 						<tr>
@@ -27,29 +29,7 @@
 							<th>IMC</th>
 						</tr>
 					</thead>
-					<tbody class="pacientes">
-						<tr class="paciente">
-							<td class="nome">Tadeu</td>
-							<td class="sobrenome">do Nascimento</td>
-							<td class="altura">1.75</td>
-							<td class="peso">78</td>
-							<td class="indice"></td>
-						</tr>
-						<tr class="paciente">
-							<td class="nome">Tadeu</td>
-							<td class="sobrenome">do Nascimento</td>
-							<td class="altura">1.75</td>
-							<td class="peso">78</td>
-							<td class="indice"></td>
-						</tr>
-						<tr class="paciente">
-							<td class="nome">Tadeu</td>
-							<td class="sobrenome">do Nascimento</td>
-							<td class="altura">1.75</td>
-							<td class="peso">78</td>
-							<td class="indice"></td>
-						</tr>
-					</tbody>
+					<tbody class="pacientes"></tbody>
 				</table>
 		</main>
 		<section class="container">
@@ -83,5 +63,6 @@
 <script src="./js/formulario.js"></script>
 <script src="./js/calculo.js"></script>
 <script src="./js/remover-paciente.js"></script>
+<script src="./js/filtrar.js"></script>
 
 </html>

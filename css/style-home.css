@@ -13,6 +13,7 @@ header {
 
 .titulo,.subtitulo {
 	font-family: monospace;
+	color:darkslategrey;
 	padding: 5px;
 }
 
@@ -60,4 +61,19 @@ thead {
 .btn-info,.btn-danger {
 	margin: 5px 0px 5px 5px;
 
+}
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+#filtro{
+	width: 260px;
+	height: 50px;
+}
+label{
+	font-size: 1.1em;
+	color:darkslategrey;
+}
+.hidden{
+	display: none;
 }
