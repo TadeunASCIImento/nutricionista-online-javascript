@@ -3,18 +3,17 @@ botaoEnviar.addEventListener("click", function(event) {
 	event.preventDefault();
 	let formulario = document.querySelector(".formulario-paciente");
 	let paciente = obterDadosDoPaciente(formulario);
-	let pacienteTr = montaTr(paciente);
 	let erros = validaPaciente(paciente);
 	if(erros.length > 0) {
 		exibeMensagensDeErro(erros);
 		return;
-	} else {
-		let pacientes = document.querySelector(".pacientes");
-		pacientes.appendChild(pacienteTr);
+	}else{
+		adicionaPacienteNaTabela(paciente);
+	}
+ 
 		formulario.reset();
 		let mensagensErro = document.querySelector(".mensagens-erro");
 		mensagensErro.innerHTML = "";
-	}
 });
 
 function exibeMensagensDeErro(erros) {
@@ -26,6 +25,13 @@ function exibeMensagensDeErro(erros) {
 		ul.appendChild(li);
 	});
 }
+
+function adicionaPacienteNaTabela(paciente){
+	let pacienteTr = montaTr(paciente);
+	let pacientes = document.querySelector(".pacientes");
+	pacientes.appendChild(pacienteTr);
+}
+
 
 function validaPaciente(paciente) {
 	let erros = [];

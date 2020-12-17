@@ -1,9 +1,10 @@
 let filtro = document.querySelector("#filtro");
 
 filtro.addEventListener("input", function() {
-	let pacientes = document.querySelectorAll(".paciente");
+    let pacientes = document.querySelectorAll(".paciente");
+
     if(this.value.length > 0) {
-		pacientes.forEach(paciente => {
+        pacientes.forEach(paciente => {
 			let tdnome = paciente.querySelector(".nome");
 			let nome = tdnome.textContent;
 	        let expressao = new RegExp(this.value,"i");		
@@ -19,4 +20,4 @@ filtro.addEventListener("input", function() {
 			paciente.classList.remove("hidden");
 		});
 	}
-});
+});     

@@ -46,7 +46,12 @@ thead {
 	background-color: orangered;
 	border: none;
 }
-
+#botao-buscar{
+	width: 200px;
+	height: 50px;
+	border: none;
+	background-color:cornflowerblue;
+}
 #botao-enviar:hover {
 	background-color: orange;
 	transition: 1s;
